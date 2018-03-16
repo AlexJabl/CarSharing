@@ -6,6 +6,9 @@
 package carsharing.ejb;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -13,5 +16,20 @@ import javax.persistence.Entity;
  */
 @Entity
 public class Fahrzeug {
+    @Id
+    @GeneratedValue
+    private long id;
+    
+    @NotNull
+    private String hersteller;
+    
+    @NotNull
+    private String modell;
+    
+    @NotNull
+    private String baujahr;
+    public Fahrzeug(){}
+    public Fahrzeug(String hersteller, String modell, String baujahr){}
+    
     
 }
