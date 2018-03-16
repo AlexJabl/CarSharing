@@ -32,6 +32,10 @@ public class Leihvertrag {
     @NotNull
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date endedatum;
+    public Leihvertrag(){}
+    public Leihvertrag(String kundenId, String fahrzeugId, String beginndatum, String endedatum){
+        
+    }
     
     
 }
