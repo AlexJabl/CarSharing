@@ -5,6 +5,7 @@
  */
 package carsharing.ejb;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +18,7 @@ import javax.validation.constraints.NotNull;
  * @author rrabieyan
  */
 @Entity
-public class Leihvertrag {
+public class Leihvertrag implements Serializable {
     @Id
     @GeneratedValue
     private long id;
@@ -33,10 +34,57 @@ public class Leihvertrag {
     @NotNull
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date endedatum;
+    
+//<editor-fold defaultstate="collapsed" desc="Konstruktoren">
     public Leihvertrag(){}
-    public Leihvertrag(String kundenId, String fahrzeugId, String beginndatum, String endedatum){
-        
+    public Leihvertrag(int kundenId, int fahrzeugId, Date beginndatum, Date endedatum){
+        this.kundenId = kundenId;
+        this.fahrzeugId = fahrzeugId;
+        this.beginndatum = beginndatum;
+        this.endedatum = endedatum;
+    }
+//</editor-fold>
+
+//<editor-fold defaultstate="collapsed" desc="Getter und Setter">
+    public long getId() {
+        return id;
     }
     
+    public void setId(long id) {
+        this.id = id;
+    }
     
+    public int getKundenId() {
+        return kundenId;
+    }
+    
+    public void setKundenId(int kundenId) {
+        this.kundenId = kundenId;
+    }
+    
+    public int getFahrzeugId() {
+        return fahrzeugId;
+    }
+    
+    public void setFahrzeugId(int fahrzeugId) {
+        this.fahrzeugId = fahrzeugId;
+    }
+    
+    public Date getBeginndatum() {
+        return beginndatum;
+    }
+    
+    public void setBeginndatum(Date beginndatum) {
+        this.beginndatum = beginndatum;
+    }
+    
+    public Date getEndedatum() {
+        return endedatum;
+    }
+    
+    public void setEndedatum(Date endedatum) {
+        this.endedatum = endedatum;
+    }
+//</editor-fold>
+
 }
