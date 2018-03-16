@@ -5,7 +5,12 @@
  */
 package carsharing.ejb;
 
+import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -13,5 +18,20 @@ import javax.persistence.Entity;
  */
 @Entity
 public class Leihvertrag {
+    @Id
+    @GeneratedValue
+    private long id;
+    
+    @NotNull
+    private int kundenId;
+    @NotNull
+    private int fahrzeugId;
+    
+    @NotNull
+    private Date beginndatum;
+    @NotNull
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date endedatum;
+    
     
 }
