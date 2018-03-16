@@ -5,6 +5,7 @@
  */
 package carsharing.ejb;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,7 +16,7 @@ import javax.validation.constraints.NotNull;
  * @author rrabieyan
  */
 @Entity
-public class Fahrzeug {
+public class Fahrzeug implements Serializable{
     @Id
     @GeneratedValue
     private long id;
