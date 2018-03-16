@@ -5,10 +5,13 @@
  */
 package carsharing.ejb;
 
+import javax.persistence.Entity;
+
 /**
  *
  * @author rrabieyan
  */
+@Entity
 public class Leihvertrag {
     
 }
