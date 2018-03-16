@@ -6,9 +6,12 @@
 package carsharing.ejb;
 
 /**
- *
- * @author rrabieyan
+ * EJB mit den üblichen Methoden zum Lesen und Schreiben von Fernsehsendern.
  */
-public class KundeBean {
+public class KundeBean extends EntityBean<Kunde, String> {
+
+    public KundeBean() {
+        super(Kunde.class);
+    }
     
 }
