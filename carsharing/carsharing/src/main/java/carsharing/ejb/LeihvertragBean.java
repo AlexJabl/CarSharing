@@ -5,10 +5,15 @@
  */
 package carsharing.ejb;
 
+import carsharing.jpa.Leihvertrag;
+
 /**
  *
  * @author rrabieyan
  */
-public class LeihvertragBean {
+public class LeihvertragBean extends EntityBean <Leihvertrag,Long>  {
+    public LeihvertragBean(){
+        super(Leihvertrag.class);
+    }
     
 }

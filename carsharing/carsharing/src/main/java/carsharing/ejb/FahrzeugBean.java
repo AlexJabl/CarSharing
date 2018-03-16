@@ -5,10 +5,16 @@
  */
 package carsharing.ejb;
 
+import carsharing.jpa.Fahrzeug;
+
 /**
  *
  * @author rrabieyan
  */
-public class FahrzeugBean {
+public class FahrzeugBean extends EntityBean<Fahrzeug, Long>{
+    public FahrzeugBean(){
+        super(Fahrzeug.class);
+    }
+    
     
 }
