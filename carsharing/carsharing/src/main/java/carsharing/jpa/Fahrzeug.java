@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package carsharing.ejb;
+package carsharing.jpa;
 
+import carsharing.ejb.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
