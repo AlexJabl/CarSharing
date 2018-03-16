@@ -28,6 +28,7 @@ public class Leihvertrag {
     private int fahrzeugId;
     
     @NotNull
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date beginndatum;
     @NotNull
     @Temporal(javax.persistence.TemporalType.DATE)

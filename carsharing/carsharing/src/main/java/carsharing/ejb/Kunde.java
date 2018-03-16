@@ -6,9 +6,12 @@
 package carsharing.ejb;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -39,10 +42,13 @@ public class Kunde implements Serializable {
     private String ort;
     @NotNull
     private String land;
+    @OneToMany
+    List<Leihvertrag> leihvertraege= new ArrayList<>();
+    
     
 //<editor-fold defaultstate="collapsed" desc="Konstruktoren">
     public Kunde(){}
-    public Kunde(String vorname, String nachname, String strasse, String hausnummer, int postleitzahl, String ort, String land ){
+    public Kunde(String vorname, String nachname, String strasse, String hausnummer, int postleitzahl, String ort, String land, Leihvertrag leihvertraege ){
         this.vorname = vorname;
         this.nachname = nachname;
         this.strasse = strasse;
@@ -50,6 +56,7 @@ public class Kunde implements Serializable {
         this.postleitzahl = postleitzahl;
         this.ort = ort;
         this.land = land;
+        this.leihvertraege=(List<Leihvertrag>) leihvertraege;
     }
 //</editor-fold>
 
@@ -116,6 +123,14 @@ public class Kunde implements Serializable {
     
     public void setLand(String land) {
         this.land = land;
+    }
+    
+    public List<Leihvertrag> getLeihvertraege() {
+        return leihvertraege;
+    }
+    
+    public void setLand(List<Leihvertrag> leihvertraege) {
+        this.leihvertraege = leihvertraege;
     }
 //</editor-fold> 
 
