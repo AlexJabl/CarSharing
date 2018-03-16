@@ -5,6 +5,8 @@
  */
 package carsharing.ejb;
 
+import carsharing.jpa.Kunde;
+
 /**
  * EJB mit den üblichen Methoden zum Lesen und Schreiben von Fernsehsendern.
  */

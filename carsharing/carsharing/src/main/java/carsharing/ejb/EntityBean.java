@@ -5,10 +5,21 @@
  */
 package carsharing.ejb;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 /**
  *
- * @author rrabieyan
  */
-public class EntityBean {
+public abstract class EntityBean<Entity, EntityId>{
+    
+    @PersistenceContext
+    EntityManager em;
+
+    private final Class<Entity> entityClass;
+    
+    public EntityBean(Class<Entity> entityClass) {
+        this.entityClass = entityClass;
+    }
     
 }
