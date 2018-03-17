@@ -32,6 +32,7 @@ public class Leihvertrag implements Serializable {
     @NotNull
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date beginndatum;
+    
     @NotNull
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date endedatum;
