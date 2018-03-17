@@ -23,7 +23,8 @@ import javax.jws.WebService;
  *
  * @author ghoghnoos
  */
-@WebService(servicename="Carsharing")
+//@WebService(servicename="Carsharing")
+@WebService
 public class CarsharingSOAPWebservice {
     @EJB
     FahrzeugBean fahrzeugBean;
